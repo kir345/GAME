@@ -10,6 +10,7 @@ public abstract class BaseHero{
     public String name;
     public boolean isDead;
     public String state;
+    public Coordinat coordinat;
 
 
 //Полный конструктор
@@ -65,5 +66,20 @@ public abstract class BaseHero{
     public String getInfo(){
         return getName();
     }
+
+    public BaseHero(String name, int x, int y){
+        this.name = name;
+        this.coordinat = new Coordinat(x, y);
+    }
+    
+    public int getX(int x){
+        return x;
+    }
+
+    public int getY(int y){
+        return y;
+    }
+
+
 
 }

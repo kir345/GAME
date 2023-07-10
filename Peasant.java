@@ -9,11 +9,15 @@ public class Peasant extends BaseHero {
         super(1, 1, 0, 1, 8, name, 1);
     }
 
+    public Peasant(String name, int x, int y){
+        super(name, x, y);
+    }
+
     public void step(){
         System.out.println("Peasant walks...");
     }
 
-    public String getInfo(){
-        return "Я Крестьянин";
-    }
+    //public String getInfo(){
+        //return "Я Крестьянин";
+    //}
 }

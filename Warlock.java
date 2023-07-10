@@ -9,12 +9,16 @@ public class Warlock extends BaseHero {
         super(25, 12, 1, 5, 13, name, 17);
     }
 
+    public Warlock(String name, int x, int y){
+        super(name, x, y);
+    }
+
     public void step(){
         System.out.println("Warlock walks...");
     }
 
-    public String getInfo(){
-        return "Я Маг";
-    }
+    //public String getInfo(){
+        //return "Я Маг";
+    //}
 
 }
