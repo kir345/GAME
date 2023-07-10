@@ -9,11 +9,15 @@ public class Sniper extends BaseHero {
         super(15, 10, 0, 8, 9, name, 12);
     }
 
+    public Sniper(String name, int x, int y){
+        super(name, x, y);
+    }
+
     public void step(){
         System.out.println("Snipeer walks...");
     }
 
-    public String getInfo(){
-        return "Я Снайпер";
-    }
+    //public String getInfo(){
+        //return "Я Снайпер";
+    //}
 }

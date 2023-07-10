@@ -11,11 +11,15 @@ public class Monk extends BaseHero{
 
     }
 
+    public Monk(String name, int x, int y){
+        super(name, x, y);
+    }
+
     public void step(){
         System.out.println("Monk walks...");
     }
 
-    public String getInfo(){
-        return "Я Монах";
-    }
+    //public String getInfo(){
+        //return "Я Монах";
+    //}
 }
