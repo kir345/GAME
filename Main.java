@@ -24,7 +24,7 @@ public class Main{
 
         for (int i = 0; i < 10; i++){
             int hero1 = random.nextInt(4);
-            int hero2 = random.nextInt(4);
+            int hero2 = random.nextInt(4) + 4;
             switch(hero1){
                 case 0:
                     list1.add(new Peasant(getName(), getX(), getY() ));
@@ -53,22 +53,7 @@ public class Main{
                     list2.add(new Monk(getName(), getX(), getY() ));
                     break;
             }
-
-            Peasant peasant = new Peasant("Noah", 10, 20);
-            System.out.println(peasant);
-
-            //System.out.println(list1);
-            //System.out.println(list2);
-        
-            //list1.forEach(n -> System.out.println(n.getInfo()));
-            //list2.forEach(n -> System.out.println(n.getInfo()));
-
         }
-    
-
-        //public String getName(){
-            //return Names.values()[new Random().nextInt(Names.values().length)].toString();
-        //}
 
         List<BaseHero>allHeroes = new ArrayList<>();
         allHeroes.addAll(list1);
@@ -77,14 +62,15 @@ public class Main{
         for(BaseHero hero: allHeroes){
             System.out.println(hero.getInfo());
         }
-        Peasant peasant = new Peasant("Noah", 10, 20);
+        Peasant farmer = new Peasant("Noah", 10, 20);
+    
     
 
-    for(int i = 1; i<= 10; i++){
-        System.out.println("Round " + ":");
+    for(int i = 1; i <= 10; i++){
+        System.out.println("Round " + i + ":");
 
         for (BaseHero c: allHeroes){
-            //c.step();
+            c.step();
             System.out.println(c.getName() + getX() + getY());
         }
         System.out.println();
@@ -102,6 +88,15 @@ public class Main{
     public static String getName() {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }
+
+    //Peasant peasant = new Peasant("Noah", 10, 20);
+    //System.out.println(peasant);
+
+    //System.out.println(list1);
+    //System.out.println(list2);
+        
+    //list1.forEach(n -> System.out.println(n.getInfo()));
+    //list2.forEach(n -> System.out.println(n.getInfo()));
 
 }
 
