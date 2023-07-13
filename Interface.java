@@ -1,10 +1,11 @@
 package units;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.List;
 
 public interface Interface {
     
-    void step(ArrayList<BaseHero> list1, ArrayList<BaseHero> list2);
+    void step(List<BaseHero> list1, List<BaseHero> list2);
     String getInfo();
         
 }
