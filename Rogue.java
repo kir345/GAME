@@ -3,16 +3,28 @@ package units;
 import java.util.List;
 
 public class Rogue extends BaseHero {
-    public Rogue(int health, int defence, int mana, int minDamage, int maxDamage, int actionPoints, String name, int attack) {
-        super(health, defence, 0, minDamage, maxDamage, actionPoints, name, attack);
+
+    private int minDamage;
+    private int maxDamage;
+
+    public Rogue(int health, int speed, int defense, int mana, int minDamage, int maxDamage, int actionPoints, String name, int attack) {
+        super(health, speed, defense, 0, minDamage, maxDamage, actionPoints, name, attack);
     }
 
     public Rogue(String name) {
-        super(10, 3, 0, 2, 4, 10, name, 8);
+        super(10, 6, 3, 0, 2, 4, 10, name, 8);
     }
 
     public Rogue(String name, int x, int y){
         super(name, x, y);
+    }
+
+    public int getMinDamage(){
+        return minDamage;
+    }
+
+    public int getmaxDamage(){
+        return maxDamage;
     }
 
     public void step(List<BaseHero> list1, List<BaseHero> list2){

@@ -7,12 +7,12 @@ public class Crossbowman extends BaseHero{
     private int minDamage;
     private int maxDamage;
     
-    public Crossbowman(int health, int defence, int mana, int minDamage, int maxDamage, int actionPoints, String name, int attack) {
-        super(health, defence, 0, minDamage, maxDamage, actionPoints, name, attack);
+    public Crossbowman(int health, int speed, int defense, int mana, int minDamage, int maxDamage, int actionPoints, String name, int attack) {
+        super(health, speed, defense, 0, minDamage, maxDamage, actionPoints, name, attack);
     }
 
     public Crossbowman(String name) {
-        super(5, 3, 0, 2, 3, 14, name, 6);
+        super(10, 4, 3, 0, 2, 3, 14, name, 6);
     }
 
     public Crossbowman(String name, int x, int y){

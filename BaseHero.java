@@ -1,24 +1,29 @@
 package units;
 
+import java.util.List;
+
 public abstract class BaseHero{
-    public int health;
-    public int defence;
-    public int mana;
-    public int minDamage;
-    public int maxDamage;
-    public int actionPoints;
-    public int attack;
-    public String name;
-    public boolean isDead;
-    public String state;
+    private int health;
+    private int speed;
+    private int defense;
+    private int mana;
+    private int minDamage;
+    private int maxDamage;
+    private int actionPoints;
+    private int attack;
+    private String name;
+    private boolean isDead;
+    private String state;
     public Coordinat coordinat;
+    
 
 
 //Полный конструктор
     
-    public BaseHero(int health, int defence, int mana, int minDamage, int maxDamage, int actionPoints, String name, int attack) {
+    public BaseHero(int health, int speed, int defense, int mana, int minDamage, int maxDamage, int actionPoints, String name, int attack) {
         this.health = health;
-        this.defence = defence;
+        this.speed = speed;
+        this.defense = defense;
         this.mana = mana;
         this.minDamage = minDamage;
         this.maxDamage = maxDamage;
@@ -29,27 +34,31 @@ public abstract class BaseHero{
         this.state ="Stand";
     }
 
-    public String getName(){
+    protected String getName(){
         return name;
     }
 
-    public Object getAttack(){
+    private Object getAttack(){
         return attack;
     }
 
-    public Object getDefense(){
-        return defence;
+    private Object getSpeed(){
+        return speed;
     }
 
-    public Object getDamageMin(){
+    private Object getDefense(){
+        return defense;
+    }
+
+    private Object getDamageMin(){
         return minDamage;
     }
 
-    public Object getDamageMax(){
+    private Object getDamageMax(){
         return maxDamage;
     }
     
-    public int getHealth(){
+    protected int getHealth(){
         return health;
     }
 
@@ -72,7 +81,7 @@ public abstract class BaseHero{
         }
     }
 
-    public Object getMana(){
+    private Object getMana(){
         return mana;
     }
 
@@ -150,5 +159,15 @@ public abstract class BaseHero{
     public void step() {
     }
 
+    public int getHp() {
+        return 0;
+    }
+
+    public void step(List<BaseHero> list1, List<BaseHero> list2) {
+    }
+
+    public int[] getCoords() {
+        return new int[] {getX(),getY()} ;
+    }
 
 }
